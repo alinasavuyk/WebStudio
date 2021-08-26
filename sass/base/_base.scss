@@ -7,24 +7,39 @@ body {
     margin-top: 0;
     margin-bottom: 0;}
   .container {
-    width: 1200px;
+   /* width: 1200px;*/
     padding: 0 15px;
-    margin-top: 0;
-    margin-bottom: 0;
     margin-left: auto;
-    margin-right: auto;}
+    margin-right: auto;
+    @media screen and (min-width: 480px) {
+      width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 768px;
+    }
+    @media screen and (min-width: 1200px) 
+    {
+      width: 1200px;
+    }
+  }
   .section {
-    padding-bottom: 94px;
-    padding-top: 94px;}
+    /*padding-bottom: 94px;
+    padding-top: 94px;*/
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
   .list{
     padding: 0;
     margin: 0;
     list-style: none;}
     .title {
-      margin-bottom: 50px;
+      /*margin-bottom: 50px;
+      font-size: 36px;*/
       font-weight: bold;
-      font-size: 36px;
-      line-height: 1.17;
+      font-size: 28px;
+      line-height: 1.18;
       text-align: center;
       letter-spacing: 0.03em;
-      color: var(--title-text-color);}
+      color: var(--title-text-color);
+      margin-bottom: 30px;}
+     

@@ -1,9 +1,12 @@
 .join {
-    align-items: center;
+     display: block;
+     margin-top: 60px;
+     margin-bottom: 60px;
+    /*align-items: center;
     justify-content: center;
     margin: 0 0 95px 83px;
     width: 206px;
-    height: 44px;}
+    height: 44px;*/}
   .join__title {
     font-size: 14px;
     line-height: 1.14;
@@ -13,6 +16,8 @@
   .join__list {
     margin-top: 20px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     fill: $white-color;
     & li + li {margin-left: 10px;}}

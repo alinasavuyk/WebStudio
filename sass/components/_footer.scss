@@ -2,22 +2,31 @@
     padding: 60px 0 60px 0;
     background-color: #2f303a;}
   .footer__container {
-    display: flex;}
+   /* display: flex;*/
+    text-align: center;}
   .footer__logo {
     display: block;
-    margin-bottom: 20px;
     font-family: Raleway;
+    font-style: normal;
     font-weight: bold;
-    font-size: 26px;
-    line-height: 1.19;
+    font-size: 24px;
+    line-height: 1,17;
+    text-align: center;
     letter-spacing: 0.03em;
-    text-decoration: none;}
+    text-decoration: none;
+    margin-bottom: 20px;
+   /* font-size: 26px;
+    line-height: 1.19;*/
+   }
   .adress {
     font-style: normal;
     &:last-child {
         padding-bottom: 0;}}
   .adress__item {
-    margin-bottom: 9px;}
+    /*margin-bottom: 9px;*/}
+    .adress__item:not(:last-child){
+      margin-bottom: 8px;
+    }
   .adress__link{
     font-weight: 400;
     font-size: 14px;

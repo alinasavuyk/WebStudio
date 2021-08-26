@@ -1,10 +1,13 @@
 .modal-form{
     display: flex;
     flex-direction: column;
+
 }
 .modal-form__title{
+    /*font-size: 20px;
+    line-height: 23px;*/
     font-size: 20px;
-    line-height: 23px;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
     color: #212121;
@@ -62,12 +65,15 @@
         border-radius: 4px;}
         .modal-form &:focus +.modal-form__icon{
             fill: $accent-color;}}
-.checkbox{
+/*.checkbox{
     margin-top: 20px;
-    margin-bottom: 30px;}
+    margin-bottom: 30px;}*/
 .checkbox__input{
-    font-size: 14px;
-    line-height: 1.71;
+
+    /*font-size: 14px;
+    line-height: 1.71;*/
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: #757575;
     width: 16px;
@@ -86,6 +92,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
     letter-spacing: 0.06em;
     padding: 10px 55px 10px 56px;
     color: $white-color;
@@ -93,7 +100,8 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     cursor: pointer;
-    margin-bottom: 40px;}
+    margin-top: 31px;
+    }
 
 
 

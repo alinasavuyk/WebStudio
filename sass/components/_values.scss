@@ -1,32 +1,40 @@
 .values {
-    display: flex;}
+  /*  display: flex;*/}
 
-  .values__item {
+ /* .values__item {
       width: 270px; 
       .values & + & {
-        margin-left: 30px;}}
+        margin-left: 30px;}}*/
+  .values__item:not(:last-child) {
+          margin-bottom: 30px;
+      }
   .values__heading{
-    margin-top: 0;
-    margin-bottom: 10px;
+  /*  margin-top: 0;
+    margin-bottom: 10px;*/
     font-weight: bold;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     letter-spacing: 0.03em;
     color: $title-text-color;
+    text-align: center;
   }
   .values__icon {
+    border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 270px;
+    /*height: 120px;*/
     height: 120px;
     background-color: #f5f4fa;
+    border-radius: 4px;
     margin-bottom: 30px;
   }
   .values__text {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin-top: 10px;
+  
+    /*margin-top: 0;
+    margin-bottom: 0;*/
     font-weight: normal;
     font-size: 14px;
     line-height: 1.71;
