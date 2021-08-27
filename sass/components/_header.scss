@@ -8,12 +8,16 @@
   .header-container,
   .logo {
     /*display: flex;
-    align-items: center;*/}
+    align-items: center;*/
+   
+  
+  }
 
-    .header-container{
-          @media screen and (min-width: 768px) {
-            display: flex;
-            align-items: center
+  .header-container{
+        @media screen and (min-width: 768px) {
+          display: flex;
+          align-items: center;
+          
             }
     }
   /*Логотип*/
@@ -24,17 +28,17 @@
     padding-bottom: 16px;
     color: #212121;
     font-family: Raleway;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.2;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     text-decoration: none;
-    /*
-    font-weight: bold;
+    /*font-weight: bold;
     font-size: 26px;
     line-height: 1.19;*/
     &-blue {
-      color: $accent-color;}
+      color: $accent-color;
+    }
     &-black {
       color: #000000;}
     &-white {
@@ -42,12 +46,15 @@
 
           @media screen and (min-width: 768px) {
             margin-right: 88px;}
-            @media screen and (min-width: 1200px) {
+          @media screen and (min-width: 1200px) {
               margin-right: 93px;
               font-weight: bold;
               font-size: 26px;
               line-height: 1.19;
+              display: flex;
+              align-items: center;
             }
+         
     
     }
   
@@ -138,8 +145,10 @@
           @media screen and (min-width: 768px) {
             display: flex;
             flex-wrap: wrap;
+            margin-left: auto;
+            
             margin-left: 84px;
-            margin-right: 15px;
+        
             }
             @media screen and (min-width: 1200px) {
               display: flex;

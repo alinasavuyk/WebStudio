@@ -27,6 +27,12 @@ body {
     padding-top: 94px;*/
     padding-bottom: 60px;
     padding-top: 60px;
+
+    @media screen and (min-width: 1200px) 
+    {
+      padding-bottom: 94px;
+      padding-top: 94px;
+    }
   }
   .list{
     padding: 0;
@@ -41,5 +47,13 @@ body {
       text-align: center;
       letter-spacing: 0.03em;
       color: var(--title-text-color);
-      margin-bottom: 30px;}
+      margin-bottom: 30px;
+    
+      @media screen and (min-width: 1200px) 
+      {
+        margin-bottom: 50px;
+        font-size: 36px;
+        line-height: 1.18;
+      }
+    }
      
