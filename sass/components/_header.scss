@@ -1,19 +1,21 @@
 .header {
     border-bottom: 1px solid #ececec;
     height: 60px;
+    
             @media screen and (min-width: 768px) {
               height: 80px;}
              
     }
-  .header-container,
+  /*.header-container,
   .logo {
-    /*display: flex;
-    align-items: center;*/
+    display: flex;
+    align-items: center;
    
   
-  }
+  }*/
 
   .header-container{
+    position: relative;
         @media screen and (min-width: 768px) {
           display: flex;
           align-items: center;
@@ -59,6 +61,7 @@
     }
   
   .site-nav {
+    position: relative;
     /*display: flex;
     margin: 0 0 0 0;
     &:last-child {

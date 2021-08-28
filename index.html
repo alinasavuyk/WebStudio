@@ -12,7 +12,7 @@
     <!--<link rel="stylesheet" href="./css/styles.css">-->
 </head>
 
-<body>
+<body class="modal-open">
     <!--Навигация по сайту-->
     <header class="header">
         <div class="header-container container">
@@ -23,7 +23,22 @@
                 <li class="site-nav__item"> <a href="./portfolio.html" class="site-nav__link" >Портфолио</a></li>
                 <li class="site-nav__item"> <a href="#" class="site-nav__link" >Контакты</a></li>
             </ul>
+            <button type="button" class="button-mobile is-open"
+             data-menu-button>
+             <svg
+            width="40"
+            height="40"
+            aria-expanded="true"
+            aria-controls="menu-container"
+            aria-label="Переключатель мобильного меню">
+                <use class="button-mobile__close" href="./images/icons.svg#close_40px"></use>
+                <use class="button-mobile__menu" href="./images/icons.svg#menu_24px"></use>
+            </svg>
+            </button>
         </nav>
+        <div class="menu-container is-open" id="menu-container" data-menu>
+            Контент меню
+        </div>
         <ul class="nav list">
             <li class="nav__item"><a  href="mailto:info@devstudio.com" class="nav__contact "><svg width="10" height="16" class="nav__icon">
                 <use href="./images/icons.svg#envelope"></use>
@@ -32,6 +47,7 @@
                 <use href="./images/icons.svg#phone"></use>
             </svg>+38 096 111 11 11</a></li>
         </ul>
+        
         </div>
     </header>
     <main>
@@ -319,6 +335,8 @@
 
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
+
 </body>
 
 </html>

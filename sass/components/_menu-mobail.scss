@@ -1,0 +1,38 @@
+.button-mobile {
+    position: absolute;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+    right:0;
+}
+.button-mobile .button-mobile__close{
+    display: none;
+}
+.is-open .button-mobile__close{
+    display: block;
+}
+.is-open .button-mobile__menu{
+    display: none;
+}
+
+//меню//
+.menu-container{
+    position: fixed;
+    /*top: 0px;*/
+    top: 50px;
+    left: 0;
+    width: 100%;
+   /* height: 100%;*/
+    height: 50%;
+    background-color:lightpink ;
+    overflow: auto;
+    display: none;
+    &.is-open{
+        display: block;
+    }
+}
+

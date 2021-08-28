@@ -6,7 +6,11 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity 250ms $timing-tunction; }
+    transition: opacity 250ms $timing-tunction; 
+    overflow-y: scroll;
+  
+  
+  }
   .modal{
     position: absolute;
     top: 50%;
@@ -18,8 +22,10 @@
     height: 609px;
     background-color: $white-color;
     padding: 40px;
-  
+    
+
     @media screen and (min-width: 1200px) {
+      
       width: 528px;
       height: 581px;
      }
