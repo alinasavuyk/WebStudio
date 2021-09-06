@@ -1,38 +1,128 @@
-.button-mobile {
-    position: absolute;
-    display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    top: 50%;
-    transform: translateY(-50%);
-    right:0;
-}
-.button-mobile .button-mobile__close{
+
+.menu-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: inline-flex;
+  border: none;
+  background-color: transparent;
+  background-color: transparent;
+  border: none;
+  margin: 0 15px 0 0;
+  padding: 0;
+
+  @media screen and (min-width: 768px) {
     display: none;
-}
-.is-open .button-mobile__close{
-    display: block;
-}
-.is-open .button-mobile__menu{
-    display: none;
+  }
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
 }
 
-//меню//
-.menu-container{
+/*.menu-button .icon-menu {
+  display: block;
+}*/
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+/*Не работает css правило  узнать почему в селекторе не нужно ставить пробел*/
+.menu-button.is-open .icon-cross {
+  display: none;
+}
+.icon-cross {
+  position: absolute;
+  top: 100%;
+}
+
+.menu-button__close {
+  position: absolute;
+  margin: 0 15px 0 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  top: 10px;
+  right: 15px;
+  border: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu-container {
     position: fixed;
-    /*top: 0px;*/
-    top: 50px;
-    left: 0;
-    width: 100%;
-   /* height: 100%;*/
-    height: 50%;
-    background-color:lightpink ;
-    overflow: auto;
+    background-color: #fff;
+    padding: 48px 40px;
+    z-index: 2;
+    width: 100vw;
+    height: 100vh;
     display: none;
-    &.is-open{
-        display: block;
+    top: 0;
+    left: 0;
+
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    &.is-open {
+      display: flex;
     }
+    .site-nav__list--menu {
+      margin-bottom: auto;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav--menu {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 64px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: none;
+    justify-content: space-between;
+    flex-grow: 1;
+    position: absolute;
+  }
 }
 
+@media screen and (min-width: 768px) {
+  .nav-social {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav-social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nav-social_item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  .nav-social_item:not(:last-of-type)::after {
+    content: "";
+    width: 1px;
+    height: 22px;
+    padding-left: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+  }
+
+  .nav-social_link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+    text-decoration: none;
+  }
+}

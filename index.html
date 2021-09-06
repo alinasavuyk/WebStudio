@@ -15,41 +15,98 @@
 <body class="modal-open">
     <!--Навигация по сайту-->
     <header class="header">
-        <div class="header-container container">
-        <nav class="site-nav" >
-            <a href="./index.html" class="logo"><span class="logo-blue">Web</span><span class="logo-black">Studio</span></a>
-            <ul class="site-nav site-nav__list" >
-                <li class="site-nav__item"> <a href="./index.html" class="site-nav__link site-nav__link--current" >Студия</a></li>
-                <li class="site-nav__item"> <a href="./portfolio.html" class="site-nav__link" >Портфолио</a></li>
-                <li class="site-nav__item"> <a href="#" class="site-nav__link" >Контакты</a></li>
+        <div class="container header__container">
+          <nav class="site-nav ">
+            <a href="./index.html" class="logo"
+              ><span class="logo-blue">Web</span><span class="logo-black">Studio</span></a
+            >
+            <ul class="site-nav__list hide list">
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link "
+                  >Портфолио</a
+                >
+              </li>
+              <li class="site-nav__item"><a href="#" class="site-nav__link">Контакты</a></li>
             </ul>
-            <button type="button" class="button-mobile is-open"
-             data-menu-button>
-             <svg
-            width="40"
-            height="40"
-            aria-expanded="true"
-            aria-controls="menu-container"
-            aria-label="Переключатель мобильного меню">
-                <use class="button-mobile__close" href="./images/icons.svg#close_40px"></use>
-                <use class="button-mobile__menu" href="./images/icons.svg#menu_24px"></use>
-            </svg>
+            <!--header mobile button-->
+  
+            <button type="button" class="menu-button js-open-menu" data-menu-button >
+              <svg
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню"
+                aria-controls="menu-container"
+              >
+              
+                <use class="icon-menu" href="./images/icons.svg#menu_24px"></use>
+              </svg>
             </button>
-        </nav>
-        <div class="menu-container is-open" id="menu-container" data-menu>
-            Контент меню
+            </nav>
+          <ul class="nav hide list">
+            <li class="nav__item">
+              <a href="mailto:info@devstudio.com" class="nav__link"
+                ><svg width="10" height="16" class="nav__icon">
+                  <use href="./images/icons.svg#envelope"></use></svg>info@devstudio.com</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="tel:+380961111111"><svg width="16" height="12" class="nav__icon nav__icon--size">
+                  <use href="./images/icons.svg#phone"></use></svg>+38 096 111 11 11</a>
+            </li>
+          </ul>
+            
+            <!--header mobile menu-->
+  
+            <div class="menu-container js-menu-container" id="menu-container" data-menu>
+              <button type="button" class="menu-button__close js-close-menu" data-menu-button >
+              <svg
+                width="40"
+                height="40"
+                aria-label="Переключатель мобильного меню">
+                 <use class="icon-cross" href="./images/icons.svg#close_40px"></use>
+              </svg>
+            </button>
+              <ul class="site-nav__list--menu list">
+                <li class="site-nav__item">
+                  <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
+                </li>
+                <li class="site-nav__item">
+                  <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+                </li>
+                <li class="site-nav__item"><a href="#" class="site-nav__link">Контакты</a></li>
+              </ul>
+              <ul class="nav--menu list">
+                <li class="nav__item">
+                  <a href="mailto:info@devstudio.com" class="nav__link nav__link--mail"><svg width="10" height="16" class="nav__icon">
+                      <use href="./images/icons.svg#envelope"></use></svg>info@devstudio.com</a>
+                </li>
+                <li class="nav__item">
+                  <a class="nav__link nav__link--tel" href="tel:+380961111111">
+                    <svg width="16" height="12" class="nav__icon nav__icon--size">
+                      <use href="./images/icons.svg#phone"></use></svg>+38 096 111 11 11</a>
+                </li>
+              </ul>
+              <ul class="nav-social list">
+                <li class="nav-social_item">
+                  <a href="" class="nav-social_link link">Instagram</a>
+                </li>
+                <li class="nav-social_item">
+                  <a href="" class="nav-social_link link">Twitter</a>
+                </li>
+                <li class="nav-social_item">
+                  <a href="" class="nav-social_link link">Facebook</a>
+                </li>
+                <li class="nav-social_item">
+                  <a href="" class="nav-social_link link">LinkedIn</a>
+                </li>
+              </ul>
+            
+            </div>
+          </nav>
         </div>
-        <ul class="nav list">
-            <li class="nav__item"><a  href="mailto:info@devstudio.com" class="nav__contact "><svg width="10" height="16" class="nav__icon">
-                <use href="./images/icons.svg#envelope"></use>
-            </svg> info@devstudio.com</a></li>
-            <li class="nav__item"><a class="nav__contact " href="tel:+380961111111"><svg  width="16" height="12" class="nav__icon nav__icon--size">
-                <use href="./images/icons.svg#phone"></use>
-            </svg>+38 096 111 11 11</a></li>
-        </ul>
-        
-        </div>
-    </header>
+      </header>
     <main>
         <!--Герой-->
         <section class="hero">
@@ -107,14 +164,20 @@
             <h2 class="title">Чем мы занимаемся</h2>
             <ul class="list inform__list">
                 <li class="inform__item"> 
-                    <div class="inform__link"> <a href="#"><img src="./images/box1.jpg" width="370" alt="Структура проекта">
+                    <div class="inform__link"> <a href="#">
+                        <img srcset="./images/img/box1.jpg 1x, ./images/img/box1@2x.jpg 2x"
+                        src="./images/box1.jpg" width="370" alt="Структура проекта">
                     <div class="inform__title"><h3>Десктопные приложения</h3></div></a></div>
                 </li>
                 <li class="inform__item"> 
-                    <div class="inform__link"> <a href="#"><img src="./images/box2.jpg" width="370" alt="Оптимизация">
+                    <div class="inform__link"> <a href="#">
+                        <img srcset="./images/img/box2.jpg 1x, ./images/img/box2@2x.jpg 2x"
+                        src="./images/box2.jpg" width="370" alt="Оптимизация">
                     <div class="inform__title"><h3>Мобильные приложения</h3></div></a></div>
                 </li>
-                <li class="inform__item"> <div class="inform__link"> <a href="#"><img src="./images/box3.jpg" width="370" alt="Дизайн">
+                <li class="inform__item"> <div class="inform__link"> <a href="#">
+                    <img srcset="./images/img/box3.jpg 1x, ./images/img/box3@2x.jpg 2x"
+                    src="./images/box3.jpg" width="370" alt="Дизайн">
                     <div class="inform__title"><h3>Дизайнерские решения</h3></div></a></div></li>
             </ul>
             </div>
@@ -124,7 +187,16 @@
             <div class="container">
 <h2 class="title">Наша команда</h2>
 <ul class="list team__list">
-    <li class="team__item"><img src="./images/igor.jpg" width="270" alt="Игорь">
+    <li class="team__item">
+        <picture>
+            <source srcset="./images/img/igor-mob.jpg 1x, ./images/img/igor-mob@2x.jpg 2x"
+            media="(max-width: 767px)"/>
+            <source srcset="./images/img/igor-tab.jpg 1x, ./images/img/igor-tab@2x.jpg 2x"
+            media="(max-width: 1199px)"/>
+            <source srcset="./images/img/igor-dec.jpg 1x, ./images/img/igor-dec@2x.jpg 2x"
+            media="(min-width: 1200px)"/>
+            <img src="./images/igor.jpg" width="270" alt="Игорь">
+        </picture>
        <div class="team__container"><h3 class="team__title">Игорь Демьяненко</h3>
         <p class="team__text">Product Designer</p>
         <div class="card">
@@ -145,7 +217,16 @@
         </div>
         </div>
     </li>
-    <li class="team__item"><img src="./images/olga.jpg" width="270" alt="Ольга">
+    <li class="team__item">
+        <picture>
+            <source srcset="./images/img/olga-mob.jpg 1x, ./images/img/olga-mob@2x.jpg 2x"
+            media="(max-width: 767px)"/>
+            <source srcset="./images/img/olga-tab.jpg 1x, ./images/img/olga-tab@2x.jpg 2x"
+            media="(max-width: 1199px)"/>
+            <source srcset="./images/img/olga-dec.jpg 1x, ./images/img/olga-dec@2x.jpg 2x"
+            media="(min-width: 1200px)"/>
+            <img src="./images/olga.jpg" width="270" alt="Ольга">
+          </picture>
     <div class="team__container"> <h3 class="team__title">Ольга Репина</h3>
         <p class="team__text">Frontend Developer</p>
         <div class="card">
@@ -166,7 +247,16 @@
         </div>
     </div>
     </li>
-    <li class="team__item"><img src="./images/tarasov.jpg" width="270" alt="Николай">
+    <li class="team__item">
+        <picture>
+            <source srcset="./images/img/kolya-mob.jpg 1x, ./images/img/kolya-mob@2x.jpg 2x"
+            media="(max-width: 767px)"/>
+            <source srcset="./images/img/kolya-tab.jpg 1x, ./images/img/kolya-tab@2x.jpg 2x"
+            media="(max-width: 1199px)"/>
+            <source srcset="./images/img/kolya-dec.jpg 1x, ./images/img/kolya-dec@2x.jpg 2x"
+            media="(min-width: 1200px)"/>
+            <img src="./images/tarasov.jpg" width="270" alt="Николай">
+        </picture>
     <div class="team__container"> <h3 class="team__title">Николай Тарасов</h3>
         <p class="team__text">Marketing</p>
         <div class="card">
@@ -187,7 +277,16 @@
         </div>
     </div>
     </li>
-    <li class="team__item"><img src="./images/ermakov.jpg" width="270" alt="Михаил">
+    <li class="team__item">
+        <picture>
+            <source srcset="./images/img/miha-mob.jpg 1x, ./images/img/miha-mob@2x.jpg 2x"
+            media="(max-width: 767px)"/>
+            <source srcset="./images/img/miha-tab.jpg 1x, ./images/img/miha-tab@2x.jpg 2x"
+            media="(max-width: 1199px)"/>
+            <source srcset="./images/img/miha-dec.jpg 1x, ./images/img/miha-dec@2x.jpg 2x"
+            media="(min-width: 1200px)"/>
+            <img src="./images/ermakov.jpg" width="270" alt="Михаил">
+        </picture>
         <div class="team__container"><h3 class="team__title">Михаил Ермаков</h3>
         <p class="team__text">UI Designer</p>
         <div class="card">
